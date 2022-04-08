@@ -3,19 +3,18 @@ import 'package:adobe_xd/pinned.dart';
 import './xd_header_box.dart';
 import './xd_status_barlight.dart';
 import './xd_button_small_not_pressed.dart';
+import './xd_trainingsvorschau1.dart';
+import 'package:adobe_xd/page_link.dart';
 import './xd_button_small_pressed.dart';
 import './xdi_phone1312_pro_max2.dart';
-import 'package:adobe_xd/page_link.dart';
 import './xd_pig_dogs.dart';
 import './xd_trainingsbox.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class XDIPhone1312ProMax7 extends StatelessWidget {
+  XDIPhone1312ProMax7({
+    Key key,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,14 +25,14 @@ class MyApp extends StatelessWidget {
             Pin(start: 0.0, end: 0.0),
             Pin(size: 144.0, start: 0.0),
             child:
-            // Adobe XD layer: 'Header Box' (component)
-            XDHeaderBox(),
+                // Adobe XD layer: 'Header Box' (component)
+                XDHeaderBox(),
           ),
           Padding(
             padding: EdgeInsets.fromLTRB(8.0, 18.0, 20.0, 892.0),
             child:
-            // Adobe XD layer: 'status bar/light' (component)
-            XDStatusBarlight(),
+                // Adobe XD layer: 'status bar/light' (component)
+                XDStatusBarlight(),
           ),
           Pinned.fromPins(
             Pin(size: 50.0, start: 16.0),
@@ -45,15 +44,15 @@ class MyApp extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(6.0),
                   child:
-                  // Adobe XD layer: 'Layer 2' (group)
-                  Stack(
+                      // Adobe XD layer: 'Layer 2' (group)
+                      Stack(
                     children: <Widget>[
                       SizedBox(
                         width: 38.0,
                         height: 38.0,
                         child:
-                        // Adobe XD layer: 'arrow-ios-back' (group)
-                        Stack(
+                            // Adobe XD layer: 'arrow-ios-back' (group)
+                            Stack(
                           children: <Widget>[
                             Transform.rotate(
                               angle: 1.5708,
@@ -95,15 +94,15 @@ class MyApp extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(6.0),
                     child:
-                    // Adobe XD layer: 'Layer 2' (group)
-                    Stack(
+                        // Adobe XD layer: 'Layer 2' (group)
+                        Stack(
                       children: <Widget>[
                         SizedBox(
                           width: 38.0,
                           height: 38.0,
                           child:
-                          // Adobe XD layer: 'arrow-ios-back' (group)
-                          Stack(
+                              // Adobe XD layer: 'arrow-ios-back' (group)
+                              Stack(
                             children: <Widget>[
                               Transform.rotate(
                                 angle: 1.5708,
@@ -206,7 +205,7 @@ class MyApp extends StatelessWidget {
                 ],
               ),
               textHeightBehavior:
-              TextHeightBehavior(applyHeightToFirstAscent: false),
+                  TextHeightBehavior(applyHeightToFirstAscent: false),
               textAlign: TextAlign.center,
               softWrap: false,
             ),
@@ -330,6 +329,108 @@ class MyApp extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
+            Pin(size: 184.0, middle: 0.4508),
+            Pin(size: 27.0, end: 126.0),
+            child: Text(
+              'LATEST COLLECTABLE',
+              style: TextStyle(
+                fontFamily: 'Interstate',
+                fontSize: 20,
+                color: const Color(0xff0a374d),
+                fontWeight: FontWeight.w300,
+              ),
+              textAlign: TextAlign.center,
+              softWrap: false,
+            ),
+          ),
+          Align(
+            alignment: Alignment(0.0, 0.425),
+            child: SizedBox(
+              width: 184.0,
+              height: 50.0,
+              child: PageLink(
+                links: [
+                  PageLinkInfo(
+                    transition: LinkTransition.Fade,
+                    ease: Curves.linear,
+                    duration: 0.3,
+                    pageBuilder: () => XDTrainingsvorschau1(),
+                  ),
+                ],
+                child: Stack(
+                  children: <Widget>[
+                    // Adobe XD layer: 'Button small not pr…' (component)
+                    XDButtonSmallNotPressed(),
+                    Pinned.fromPins(
+                      Pin(size: 78.0, middle: 0.5),
+                      Pin(start: 4.0, end: 6.0),
+                      child: Text(
+                        'START',
+                        style: TextStyle(
+                          fontFamily: 'Interstate',
+                          fontSize: 30,
+                          color: const Color(0xff0a374d),
+                          fontWeight: FontWeight.w300,
+                        ),
+                        textAlign: TextAlign.center,
+                        softWrap: false,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment(0.0, 0.302),
+            child: SizedBox(
+              width: 162.0,
+              height: 40.0,
+              child: Text.rich(
+                TextSpan(
+                  style: TextStyle(
+                    fontFamily: 'Interstate',
+                    fontSize: 30,
+                    color: const Color(0xff0a374d),
+                  ),
+                  children: [
+                    TextSpan(
+                      text: 'Start ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'at ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '17:30',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ],
+                ),
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToFirstAscent: false),
+                textAlign: TextAlign.center,
+                softWrap: false,
+              ),
+            ),
+          ),
+          Pinned.fromPins(
+            Pin(size: 8.0, middle: 0.4952),
+            Pin(size: 8.0, end: 793.0),
+            child: SvgPicture.string(
+              _svg_ta9,
+              allowDrawingOutsideViewBox: true,
+              fit: BoxFit.fill,
+            ),
+          ),
+          Pinned.fromPins(
             Pin(start: 0.0, end: 0.0),
             Pin(size: 66.0, end: 0.0),
             child: Stack(
@@ -359,8 +460,8 @@ class MyApp extends StatelessWidget {
                   Pin(size: 50.0, middle: 0.5),
                   Pin(start: 8.0, end: 8.0),
                   child:
-                  // Adobe XD layer: 'Button small pressed' (component)
-                  XDButtonSmallPressed(),
+                      // Adobe XD layer: 'Button small pressed' (component)
+                      XDButtonSmallPressed(),
                 ),
                 Pinned.fromPins(
                   Pin(size: 25.0, middle: 0.5),
@@ -375,8 +476,8 @@ class MyApp extends StatelessWidget {
                   Pin(size: 50.0, end: 60.0),
                   Pin(start: 8.0, end: 8.0),
                   child:
-                  // Adobe XD layer: 'Button small not pr…' (component)
-                  PageLink(
+                      // Adobe XD layer: 'Button small not pr…' (component)
+                      PageLink(
                     links: [
                       PageLinkInfo(
                         transition: LinkTransition.Fade,
@@ -403,8 +504,8 @@ class MyApp extends StatelessWidget {
                   Pin(size: 50.0, start: 60.0),
                   Pin(start: 8.0, end: 8.0),
                   child:
-                  // Adobe XD layer: 'Button small not pr…' (component)
-                  PageLink(
+                      // Adobe XD layer: 'Button small not pr…' (component)
+                      PageLink(
                     links: [
                       PageLinkInfo(
                         transition: LinkTransition.Fade,
@@ -450,60 +551,65 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ),
-          Pinned.fromPins(
-            Pin(size: 120.0, middle: 0.5),
-            Pin(size: 120.0, end: 109.0),
-            child: Stack(
-              children: <Widget>[
-                // Adobe XD layer: 'Trainingsbox' (component)
-                XDTrainingsbox(),
-                Pinned.fromPins(
-                  Pin(size: 62.0, middle: 0.5),
-                  Pin(size: 60.0, end: 17.0),
-                  child: Text(
-                    'Can your \nLungs \nfreeze?',
-                    style: TextStyle(
-                      fontFamily: 'Interstate',
-                      fontSize: 15,
-                      color: const Color(0xff0a374d),
-                      fontWeight: FontWeight.w300,
-                    ),
-                    textAlign: TextAlign.center,
-                    softWrap: false,
-                  ),
-                ),
-                Transform.translate(
-                  offset: Offset(47.6, 14.0),
-                  child: SizedBox(
-                    width: 25.0,
-                    height: 27.0,
-                    child:
-                    // Adobe XD layer: 'layer1' (group)
-                    Stack(
-                      children: <Widget>[
-                        SizedBox(
-                          width: 25.0,
-                          height: 27.0,
-                          child:
-                          // Adobe XD layer: 'g7075' (group)
-                          Stack(
-                            children: <Widget>[
-                              SizedBox(
-                                width: 25.0,
-                                height: 27.0,
-                                child: SvgPicture.string(
-                                  _svg_booy4f,
-                                  allowDrawingOutsideViewBox: true,
-                                ),
-                              ),
-                            ],
-                          ),
+          Transform.translate(
+            offset: Offset(322.0, 743.0),
+            child: SizedBox(
+              width: 90.0,
+              height: 90.0,
+              child: Stack(
+                children: <Widget>[
+                  // Adobe XD layer: 'Trainingsbox' (component)
+                  XDTrainingsbox(),
+                  Transform.translate(
+                    offset: Offset(11.5, 32.8),
+                    child: SizedBox(
+                      width: 63.0,
+                      child: Text(
+                        'Can your \nLungs \nfreeze?',
+                        style: TextStyle(
+                          fontFamily: 'Interstate',
+                          fontSize: 10,
+                          color: const Color(0xff0a374d),
+                          fontWeight: FontWeight.w300,
                         ),
-                      ],
+                        textAlign: TextAlign.center,
+                        softWrap: false,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  Transform.translate(
+                    offset: Offset(35.7, 10.5),
+                    child: SizedBox(
+                      width: 19.0,
+                      height: 20.0,
+                      child:
+                          // Adobe XD layer: 'layer1' (group)
+                          Stack(
+                        children: <Widget>[
+                          SizedBox(
+                            width: 19.0,
+                            height: 20.0,
+                            child:
+                                // Adobe XD layer: 'g7075' (group)
+                                Stack(
+                              children: <Widget>[
+                                SizedBox(
+                                  width: 19.0,
+                                  height: 20.0,
+                                  child: SvgPicture.string(
+                                    _svg_drve22,
+                                    allowDrawingOutsideViewBox: true,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Transform.translate(
@@ -521,8 +627,8 @@ class MyApp extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.fromLTRB(0.0, 0.6, 0.0, 0.0),
                           child:
-                          // Adobe XD layer: 'Trainingsbox' (component)
-                          XDTrainingsbox(),
+                              // Adobe XD layer: 'Trainingsbox' (component)
+                              XDTrainingsbox(),
                         ),
                         Transform.translate(
                           offset: Offset(17.7, 0.0),
@@ -695,8 +801,8 @@ class MyApp extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.fromLTRB(0.0, 0.6, 0.0, 0.0),
                   child:
-                  // Adobe XD layer: 'Trainingsbox' (component)
-                  XDTrainingsbox(),
+                      // Adobe XD layer: 'Trainingsbox' (component)
+                      XDTrainingsbox(),
                 ),
                 Transform.translate(
                   offset: Offset(16.7, 0.0),
@@ -826,8 +932,8 @@ class MyApp extends StatelessWidget {
                           width: 19.0,
                           height: 21.0,
                           child:
-                          // Adobe XD layer: '2. Abs' (group)
-                          Stack(
+                              // Adobe XD layer: '2. Abs' (group)
+                              Stack(
                             children: <Widget>[
                               SizedBox(
                                 width: 19.0,
@@ -960,8 +1066,8 @@ class MyApp extends StatelessWidget {
                       width: 29.0,
                       height: 33.0,
                       child:
-                      // Adobe XD layer: '2. Abs' (group)
-                      Stack(
+                          // Adobe XD layer: '2. Abs' (group)
+                          Stack(
                         children: <Widget>[
                           SizedBox(
                             width: 29.0,
@@ -1020,131 +1126,12 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-          Align(
-            alignment: Alignment(0.0, 0.449),
-            child: SizedBox(
-              width: 278.0,
-              height: 40.0,
-              child: Text(
-                'LATEST COLLECTABLE',
-                style: TextStyle(
-                  fontFamily: 'Interstate',
-                  fontSize: 30,
-                  color: const Color(0xff0a374d),
-                  fontWeight: FontWeight.w300,
-                ),
-                textAlign: TextAlign.center,
-                softWrap: false,
-              ),
-            ),
-          ),
         ],
       ),
     );
-
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
 const String _svg_e =
     '<svg viewBox="13.6 8.1 11.2 22.4" ><path transform="translate(5.6, 3.06)" d="M 17.34909057617188 27.4405689239502 C 16.86408615112305 27.44221878051758 16.40442085266113 27.22417259216309 16.09887313842773 26.84751892089844 L 8.357139587402344 17.23045921325684 C 7.870968818664551 16.63900947570801 7.870968818664551 15.786301612854 8.357139587402344 15.19484901428223 L 16.37135696411133 5.577791690826416 C 16.93790245056152 4.896166801452637 17.94973754882812 4.802877426147461 18.63136672973633 5.369421482086182 C 19.31298828125 5.935966491699219 19.40627670288086 6.947806835174561 18.83973693847656 7.629430294036865 L 11.67502403259277 16.22067070007324 L 18.59930801391602 24.81190872192383 C 18.99952697753906 25.29231834411621 19.08384323120117 25.96160507202148 18.81528472900391 26.52626991271973 C 18.54672241210938 27.0909309387207 17.97431945800781 27.4478759765625 17.34909057617188 27.4405689239502 Z" fill="#0a374d" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_b72fec =
@@ -1163,8 +1150,10 @@ const String _svg_ox8ruw =
     '<svg viewBox="67.7 885.4 11.4 14.6" ><path transform="translate(67.57, 885.4)" d="M 0.2981788218021393 14.58795547485352 C 0.4197256565093994 14.61962509155273 0.5441415905952454 14.54765892028809 0.5772902965545654 14.4265079498291 C 1.047037243843079 12.67385005950928 2.956124544143677 12.2196102142334 4.097198486328125 11.94779491424561 C 4.383151054382324 11.87984180450439 4.608903408050537 11.82602691650391 4.755756378173828 11.76263236999512 C 6.055541038513184 11.19848155975342 6.479224681854248 10.29091167449951 6.606011390686035 9.628704071044922 C 6.621356010437012 9.54851245880127 6.592654228210449 9.466235160827637 6.530760288238525 9.412986755371094 C 5.853960514068604 8.828766822814941 5.282966613769531 7.951754093170166 4.922676086425781 6.942939281463623 C 4.912511825561523 6.91400671005249 4.896524429321289 6.887465476989746 4.875701904296875 6.864951610565186 C 4.399113655090332 6.346863269805908 4.12547492980957 5.799129009246826 4.12547492980957 5.362674713134766 C 4.12547492980957 5.107734680175781 4.221704483032227 4.936710357666016 4.438335418701172 4.807643890380859 C 4.504252910614014 4.768238544464111 4.545908451080322 4.698298931121826 4.549159049987793 4.621569633483887 C 4.649949073791504 2.29837441444397 6.304552555084229 0.4695543646812439 8.334040641784668 0.4576966762542725 L 8.382840156555176 0.4608891010284424 C 10.42236232757568 0.4891651272773743 11.49258422851562 2.274658203125 11.49258422851562 2.274658203125 C 11.49258422851562 1.374755859375 10.64628982543945 0.03629273548722267 8.382839202880859 0.003912129905074835 L 8.314886093139648 0.002999999560415745 C 6.09248161315918 0.01485768705606461 4.260925769805908 1.974568367004395 4.100846767425537 4.486117362976074 C 3.81535005569458 4.695907592773438 3.670321702957153 4.990068912506104 3.670321702957153 5.363585948944092 C 3.670321702957153 5.903110980987549 3.975429058074951 6.548442840576172 4.509480953216553 7.140414714813232 C 4.878437519073486 8.15424633026123 5.450342178344727 9.044941902160645 6.131247520446777 9.668381690979004 C 5.947453498840332 10.41267967224121 5.424346446990967 10.97592163085938 4.574242115020752 11.34487819671631 C 4.464330673217773 11.39276313781738 4.245419502258301 11.44521045684814 3.991847515106201 11.50541305541992 C 2.832986831665039 11.78087615966797 0.6767120957374573 12.29394721984863 0.1367314159870148 14.30884265899658 C 0.1042581871151924 14.43049716949463 0.1765331029891968 14.55544757843018 0.2981783449649811 14.5879545211792 Z" fill="none" stroke="#0a374d" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_ujn57v =
     '<svg viewBox="91.0 885.4 11.4 14.6" ><path transform="translate(90.87, 885.4)" d="M 11.32336044311523 14.58794689178467 C 11.20181369781494 14.61961650848389 11.0773983001709 14.54765033721924 11.04424953460693 14.42649936676025 C 10.57450294494629 12.67384243011475 8.665416717529297 12.21960258483887 7.524343013763428 11.94778823852539 C 7.238390445709229 11.87983512878418 7.012638568878174 11.82602024078369 6.865785598754883 11.7626256942749 C 5.566001892089844 11.1984748840332 5.142318248748779 10.29090595245361 5.015531539916992 9.628698348999023 C 5.000186920166016 9.548506736755371 5.028888702392578 9.466229438781738 5.090782642364502 9.412981033325195 C 5.767581939697266 8.828761100769043 6.338575839996338 7.951749324798584 6.69886589050293 6.942934989929199 C 6.709030151367188 6.914002418518066 6.725017547607422 6.887461185455322 6.745840072631836 6.864947319030762 C 7.222427845001221 6.346859455108643 7.496066570281982 5.799125671386719 7.496066570281982 5.362671375274658 C 7.496066570281982 5.107731819152832 7.399837017059326 4.936707496643066 7.183206558227539 4.80764102935791 C 7.117289066314697 4.768235683441162 7.075633525848389 4.698296070098877 7.072382926940918 4.621566772460938 C 6.971592903137207 2.298372983932495 5.316990375518799 0.4695540964603424 3.287503242492676 0.457696408033371 L 3.238703727722168 0.4608888328075409 C 1.199183464050293 0.4891648292541504 0.1289615631103516 2.274656772613525 0.1289615631103516 2.274656772613525 C 0.1289615631103516 1.374755024909973 0.9752559661865234 0.03629271313548088 3.238704681396484 0.003912129439413548 L 3.306657791137695 0.002999999560415745 C 5.529061317443848 0.01485767960548401 7.360615730285645 1.974567174911499 7.520694732666016 4.486114501953125 C 7.806191444396973 4.695904731750488 7.95121955871582 4.990066051483154 7.95121955871582 5.363582611083984 C 7.95121955871582 5.903107643127441 7.646112442016602 6.548439025878906 7.112061023712158 7.140410423278809 C 6.743104457855225 8.154241561889648 6.171200275421143 9.044936180114746 5.49029541015625 9.668375968933105 C 5.674088954925537 10.412672996521 6.197196006774902 10.97591495513916 7.047299861907959 11.34487152099609 C 7.157211303710938 11.39275646209717 7.376121997833252 11.44520378112793 7.629693984985352 11.50540637969971 C 8.788554191589355 11.78086948394775 10.94482707977295 12.2939395904541 11.48480796813965 14.30883407592773 C 11.51728057861328 14.43048858642578 11.44500637054443 14.55543899536133 11.32336139678955 14.58794593811035 Z" fill="none" stroke="#0a374d" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
-const String _svg_booy4f =
-    '<svg viewBox="3.6 1023.3 24.8 27.0" ><path transform="translate(0.0, 1020.36)" d="M 15.99219989776611 2.986330032348633 C 15.71605110168457 2.990631580352783 15.495680809021 3.21799111366272 15.5 3.494139671325684 L 15.5 5.558589935302734 L 13.29880046844482 4.080080032348633 C 13.21646976470947 4.02182149887085 13.11844635009766 3.989820957183838 13.01760005950928 3.988279581069946 L 13.01760005950928 3.990230083465576 C 12.79487323760986 3.987609386444092 12.59726619720459 4.132621288299561 12.53295993804932 4.345878601074219 C 12.46865367889404 4.559135913848877 12.5531530380249 4.789215564727783 12.74020004272461 4.910160064697266 L 15.5 6.763669967651367 L 15.5 9.554690361022949 L 13.29880046844482 8.076169967651367 C 13.21646785736084 8.017914772033691 13.11844539642334 7.985918045043945 13.01760005950928 7.984379291534424 L 13.01760005950928 7.986330032348633 C 12.79487991333008 7.983716487884521 12.59728145599365 8.128726959228516 12.5329761505127 8.341977119445801 C 12.46867084503174 8.555228233337402 12.55316352844238 8.785301208496094 12.74020004272461 8.90625 L 15.5 10.75979995727539 L 15.5 15.6230001449585 L 11.28709983825684 13.1894998550415 L 11.0605001449585 9.876950263977051 C 11.05355072021484 9.741735458374023 10.99206924438477 9.615118026733398 10.89010810852051 9.526039123535156 C 10.78814697265625 9.436960220336914 10.65442276000977 9.393033981323242 10.51949977874756 9.404299736022949 C 10.38708114624023 9.415254592895508 10.26446628570557 9.478460311889648 10.17872428894043 9.579963684082031 C 10.09298229217529 9.68146800994873 10.05116367340088 9.812922477722168 10.06249904632568 9.945309638977051 L 10.24409961700439 12.58590030670166 L 7.826169967651367 11.19139957427979 L 7.599609851837158 7.880859851837158 C 7.585298538208008 7.619189739227295 7.371397972106934 7.412955284118652 7.109379768371582 7.408200263977051 C 6.968338012695312 7.406085968017578 6.832963943481445 7.463638782501221 6.736625671386719 7.566673278808594 C 6.640287399291992 7.669707775115967 6.591946601867676 7.808638572692871 6.603519916534424 7.949220657348633 L 6.783199787139893 10.58790016174316 L 4.992189884185791 9.554690361022949 C 4.905200958251953 9.502470970153809 4.804385185241699 9.477949142456055 4.70313024520874 9.484379768371582 C 4.482081890106201 9.498964309692383 4.296977043151855 9.65725040435791 4.248250007629395 9.873354911804199 C 4.199522972106934 10.08945846557617 4.298789978027344 10.31186485290527 4.492189884185791 10.41989994049072 L 6.289060115814209 11.45699977874756 L 3.902339935302734 12.6269998550415 C 3.654253721237183 12.74835300445557 3.551516532897949 13.04784297943115 3.67287015914917 13.29592990875244 C 3.794223785400391 13.54401588439941 4.093713760375977 13.64675331115723 4.341800212860107 13.52540016174316 L 7.333980083465576 12.0605001449585 L 9.748049736022949 13.45510005950928 L 7.361330032348633 14.6230001449585 C 7.113216400146484 14.74488925933838 7.010890960693359 15.04483604431152 7.132780075073242 15.29295063018799 C 7.254669189453125 15.54106426239014 7.55461597442627 15.64338970184326 7.802730083465576 15.52150058746338 L 10.79100036621094 14.05659961700439 L 15.00979995727539 16.49220085144043 L 10.79489994049072 18.92580032348633 L 7.800779819488525 17.45899963378906 C 7.726339340209961 17.42170524597168 7.643765449523926 17.40359115600586 7.560550212860107 17.40629768371582 L 7.560550212860107 17.40819931030273 C 7.329963684082031 17.4155445098877 7.134330749511719 17.57968521118164 7.087038040161133 17.80549049377441 C 7.039745330810547 18.03129386901855 7.153069496154785 18.2601432800293 7.361329078674316 18.35939979553223 L 9.75 19.52930068969727 L 7.332029819488525 20.92379951477051 L 4.341800212860107 19.45899963378906 C 4.266772270202637 19.42138671875 4.183483600616455 19.40326309204102 4.099609851837158 19.40629768371582 L 4.099609851837158 19.40819931030273 C 3.869364976882935 19.4163703918457 3.674503803253174 19.58079719543457 3.627718925476074 19.80638694763184 C 3.580933809280396 20.0319766998291 3.694335460662842 20.26033592224121 3.902340888977051 20.35939788818359 L 6.287109851837158 21.52729988098145 L 4.492189884185791 22.56450080871582 C 4.252703666687012 22.70254516601562 4.170518398284912 23.00860786437988 4.308601379394531 23.24807167053223 C 4.446684837341309 23.48753547668457 4.752747058868408 23.56972122192383 4.99221134185791 23.43163871765137 L 6.783199787139893 22.39839935302734 L 6.603519916534424 25.03709983825684 C 6.580066204071045 25.22142791748047 6.66075611114502 25.40356254577637 6.813042640686035 25.51003456115723 C 6.965328693389893 25.61650657653809 7.164095401763916 25.62975692749023 7.329166412353516 25.54444122314453 C 7.494237899780273 25.4591236114502 7.598389148712158 25.2893123626709 7.599609851837158 25.10350036621094 L 7.826169967651367 21.79490089416504 L 10.24409961700439 20.40040016174316 L 10.0625 23.03709983825684 C 10.04407119750977 23.31273651123047 10.25265502929688 23.55105209350586 10.52829456329346 23.56939125061035 C 10.80393409729004 23.58773040771484 11.04225158691406 23.37914848327637 11.06059074401855 23.10350799560547 L 11.28520011901855 19.79689979553223 L 15.5 17.36520004272461 L 15.5 22.22270011901855 L 12.74020004272461 24.07620048522949 C 12.51097393035889 24.23045349121094 12.45019721984863 24.54132461547852 12.60445022583008 24.77055168151855 C 12.75870323181152 24.99977684020996 13.0695743560791 25.06055450439453 13.29880046844482 24.90629959106445 L 15.5 23.42770004272461 L 15.5 26.21680068969727 L 12.74020004272461 28.07029914855957 C 12.51097393035889 28.22455024719238 12.45019626617432 28.53542137145996 12.60444927215576 28.7646484375 C 12.75870227813721 28.99387359619141 13.06957244873047 29.05465126037598 13.29879951477051 28.90039825439453 L 15.5 27.42189979553223 L 15.5 29.49410057067871 C 15.49995040893555 29.7702693939209 15.7238302230835 29.99414825439453 16 29.99414825439453 C 16.27617073059082 29.99414825439453 16.50004959106445 29.7702693939209 16.50004959106445 29.49409866333008 L 16.5 27.42189979553223 L 18.70120048522949 28.90040016174316 C 18.8493766784668 29.00778770446777 19.04438018798828 29.02565383911133 19.20960426330566 28.94698143005371 C 19.37483024597168 28.86831092834473 19.48388481140137 28.70566940307617 19.49392890930176 28.52294540405273 C 19.50397300720215 28.34022331237793 19.41340446472168 28.1666088104248 19.25779724121094 28.07029914855957 L 16.5 26.21680068969727 L 16.5 23.42770004272461 L 18.70120048522949 24.90629959106445 C 18.8493766784668 25.01370429992676 19.04438972473145 25.03158378601074 19.20962715148926 24.95291328430176 C 19.37486457824707 24.87424087524414 19.48392486572266 24.71158981323242 19.49396514892578 24.52885627746582 C 19.50400543212891 24.34612274169922 19.41342163085938 24.1725025177002 19.25779914855957 24.07620239257812 L 16.5 22.22270011901855 L 16.5 17.35350036621094 L 20.71290016174316 19.78520011901855 L 20.93950080871582 23.10549926757812 C 20.9583683013916 23.38110542297363 21.19709968566895 23.58921241760254 21.47270202636719 23.5703239440918 C 21.74830627441406 23.55143547058105 21.95641326904297 23.31270217895508 21.93752479553223 23.03709983825684 L 21.75589942932129 20.38669967651367 L 24.17189979553223 21.78319931030273 L 24.40040016174316 25.10549926757812 C 24.40164566040039 25.29129600524902 24.50580215454102 25.46108245849609 24.67086219787598 25.54638481140137 C 24.83592414855957 25.63168716430664 25.03467178344727 25.61843872070312 25.18694877624512 25.51198196411133 C 25.3392276763916 25.40552711486816 25.41992568969727 25.22341728210449 25.39649963378906 25.03910064697266 L 25.21680068969727 22.38479995727539 L 27.00779914855957 23.41990089416504 C 27.16281509399414 23.51803207397461 27.3591194152832 23.52339363098145 27.51926040649414 23.43387222290039 C 27.67940330505371 23.34435081481934 27.77766227722168 23.17432403564453 27.77527046203613 22.99087524414062 C 27.77287864685059 22.80742454528809 27.67021942138672 22.64001655578613 27.50779914855957 22.55470085144043 L 25.72270011901855 21.52339935302734 L 28.09770011901855 20.35939979553223 C 28.30797004699707 20.25889015197754 28.42092514038086 20.02645111083984 28.37002182006836 19.79902076721191 C 28.31911849975586 19.57159233093262 28.11785316467285 19.40948295593262 27.88479995727539 19.40819931030273 C 27.80617332458496 19.40770721435547 27.72854042053223 19.42576217651367 27.65819931030273 19.46090126037598 L 24.67770004272461 20.92189979553223 L 22.25979995727539 19.52339935302734 L 24.63870048522949 18.35939979553223 C 24.84930038452148 18.25872421264648 24.96223068237305 18.02573776245117 24.91078948974609 17.79805183410645 C 24.85934829711914 17.57036399841309 24.65722465515137 17.4085578918457 24.42379951477051 17.40819931030273 C 24.34520530700684 17.4077205657959 24.26760864257812 17.4257755279541 24.19729804992676 17.46089744567871 L 21.21680068969727 18.92189979553223 L 17.00979995727539 16.49220085144043 L 21.22069931030273 14.0625 L 24.19729995727539 15.52149963378906 C 24.44541358947754 15.64338970184326 24.745361328125 15.54106521606445 24.86725044250488 15.2929515838623 C 24.98913955688477 15.04483699798584 24.88681602478027 14.74488925933838 24.63870048522949 14.6230001449585 L 22.26370048522949 13.45899963378906 L 24.67580032348633 12.06639957427979 L 27.65819931030273 13.52540016174316 C 27.90628433227539 13.64676380157471 28.20578384399414 13.54403495788574 28.3271484375 13.29594898223877 C 28.44851303100586 13.04786205291748 28.34578514099121 12.74836349487305 28.09769821166992 12.62699890136719 L 25.72270011901855 11.46290016174316 L 27.50779914855957 10.43159961700439 C 27.70516204833984 10.32245540618896 27.80503845214844 10.09470653533936 27.75163078308105 9.875590324401855 C 27.69822311401367 9.656475067138672 27.50475120544434 9.500226974487305 27.2793025970459 9.494139671325684 L 27.27930068969727 9.496089935302734 C 27.18413734436035 9.492559432983398 27.08994293212891 9.516275405883789 27.00779914855957 9.564449310302734 L 25.21680068969727 10.59959983825684 L 25.39649963378906 7.949220180511475 C 25.4084415435791 7.805841445922852 25.35804748535156 7.664265632629395 25.25819778442383 7.560678482055664 C 25.15834999084473 7.457091808319092 25.01872062683105 7.40153169631958 24.875 7.408199787139893 C 24.61906242370605 7.420874118804932 24.41412544250488 7.624974250793457 24.4004020690918 7.880859375 L 24.17189979553223 11.20119953155518 L 21.75589942932129 12.59770011901855 L 21.9375 9.945309638977051 C 21.94944190979004 9.801932334899902 21.89904594421387 9.660359382629395 21.79919624328613 9.556775093078613 C 21.6993465423584 9.453190803527832 21.55971908569336 9.397632598876953 21.41600036621094 9.404300689697266 C 21.15932464599609 9.416031837463379 20.95331192016602 9.620378494262695 20.93950080871582 9.876950263977051 L 20.71290016174316 13.19919967651367 L 16.5 15.63090038299561 L 16.5 10.75979995727539 L 19.25779914855957 8.90625 C 19.41350173950195 8.809985160827637 19.50415992736816 8.636335372924805 19.49413871765137 8.453551292419434 C 19.4841194152832 8.270768165588379 19.37502288818359 8.10806941986084 19.20973014831543 8.029401779174805 C 19.04443740844727 7.95073413848877 18.8493709564209 7.968673229217529 18.70119857788086 8.076169013977051 L 16.5 9.554690361022949 L 16.5 6.763669967651367 L 19.25779914855957 4.910160064697266 C 19.41350173950195 4.813895702362061 19.50415992736816 4.640245914459229 19.49413871765137 4.457462787628174 C 19.4841194152832 4.274679183959961 19.37502288818359 4.111979961395264 19.20973014831543 4.033312320709229 C 19.04443740844727 3.954644918441772 18.8493709564209 3.972584247589111 18.70119857788086 4.080079555511475 L 16.5 5.558589935302734 L 16.5 3.494139909744263 C 16.50211715698242 3.358824014663696 16.44929695129395 3.228428363800049 16.35360336303711 3.132733106613159 C 16.25790977478027 3.03703784942627 16.12751579284668 2.98421573638916 15.9921989440918 2.986329793930054 Z" fill="#0a374d" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_ta9 =
+    '<svg viewBox="208.0 125.0 8.0 8.0" ><path transform="translate(200.2, 117.2)" d="M 7.80000114440918 11.79999923706055 C 7.80000114440918 14.00914192199707 9.590862274169922 15.80000114440918 11.80000305175781 15.80000114440918 C 14.00914192199707 15.80000114440918 15.80000114440918 14.00914192199707 15.80000114440918 11.79999923706055 C 15.79999923706055 9.590860366821289 14.00914192199707 7.80000114440918 11.79999923706055 7.80000114440918 C 9.590860366821289 7.80000114440918 7.80000114440918 9.590860366821289 7.80000114440918 11.79999923706055 Z" fill="#0a374d" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
+const String _svg_drve22 =
+    '<svg viewBox="0.0 0.0 18.6 20.3" ><path transform="translate(-3.62, -2.99)" d="M 12.89846420288086 2.98631477355957 C 12.69135284423828 2.989541053771973 12.52607440948486 3.16006064414978 12.5293140411377 3.367172002792358 L 12.5293140411377 4.915509700775146 L 10.87841415405273 3.80662727355957 C 10.81666660308838 3.762933254241943 10.74314880371094 3.738933086395264 10.66751384735107 3.7377769947052 L 10.66751384735107 3.739239692687988 C 10.50046920776367 3.737274169921875 10.35226345062256 3.846033096313477 10.30403423309326 4.00597620010376 C 10.25580406188965 4.165919303894043 10.31917858123779 4.338479042053223 10.45946407318115 4.429187297821045 L 12.5293140411377 5.819319725036621 L 12.5293140411377 7.912584781646729 L 10.87841415405273 6.803694725036621 C 10.81666469573975 6.760003566741943 10.74314785003662 6.736005783081055 10.66751384735107 6.734851837158203 L 10.66751384735107 6.73631477355957 C 10.50047397613525 6.734354496002197 10.35227489471436 6.843112468719482 10.30404663085938 7.003050327301025 C 10.25581741333008 7.162988185882568 10.31918716430664 7.335543155670166 10.45946407318115 7.426254749298096 L 12.5293140411377 8.81641674041748 L 12.5293140411377 12.46381664276123 L 9.369638442993164 10.63869190216064 L 9.199688911437988 8.154279708862305 C 9.194477081298828 8.052868843078613 9.14836597442627 7.957905769348145 9.071895599365234 7.891096591949463 C 8.995424270629883 7.824287414550781 8.89513111114502 7.791342735290527 8.793938636779785 7.799791812896729 C 8.694624900817871 7.808008193969727 8.602663993835449 7.855412483215332 8.538357734680176 7.931540012359619 C 8.474050521850586 8.007667541503906 8.442687034606934 8.106258392333984 8.451188087463379 8.205549240112305 L 8.58738899230957 10.18599224090576 L 6.773941516876221 9.140116691589355 L 6.604021549224854 6.657212257385254 C 6.593287944793701 6.460959434509277 6.432862281799316 6.306283473968506 6.236349105834961 6.302717685699463 C 6.13056755065918 6.301131725311279 6.029036998748779 6.344296455383301 5.956783294677734 6.421572208404541 C 5.884529590606689 6.498847961425781 5.848274230957031 6.60304594039917 5.856954097747803 6.70848274230957 L 5.991714000701904 8.687492370605469 L 4.648456573486328 7.912584781646729 C 4.58321475982666 7.873420238494873 4.507603168487549 7.855029106140137 4.431661605834961 7.859852313995361 C 4.265875339508057 7.870790481567383 4.127047061920166 7.989505290985107 4.09050178527832 8.151582717895508 C 4.053956508636475 8.313660621643066 4.128406524658203 8.480465888977051 4.273456573486328 8.561491966247559 L 5.621109008789062 9.339316368103027 L 3.831068992614746 10.21681690216064 C 3.645004272460938 10.30783176422119 3.567951679229736 10.53244876861572 3.658966541290283 10.71851444244385 C 3.749981880187988 10.90457916259766 3.974599361419678 10.98163223266602 4.160664081573486 10.89061737060547 L 6.404798984527588 9.79194164276123 L 8.215351104736328 10.83789157867432 L 6.42531156539917 11.71381664276123 C 6.239226341247559 11.8052339553833 6.162482261657715 12.03019332885742 6.253899097442627 12.21627998352051 C 6.345315933227539 12.40236473083496 6.570276260375977 12.4791088104248 6.756361484527588 12.38769245147705 L 8.997564315795898 11.28901672363281 L 12.16166400909424 13.1157169342041 L 9.000489234924316 14.94091701507568 L 6.754899024963379 13.84081649780273 C 6.699068546295166 13.81284523010254 6.637138366699219 13.79926013946533 6.574726581573486 13.80129051208496 L 6.574726581573486 13.80271625518799 C 6.401786804199219 13.80822563171387 6.255062103271484 13.93133068084717 6.219592571258545 14.10068511962891 C 6.184123039245605 14.2700366973877 6.269116401672363 14.44167423248291 6.425311088562012 14.51611709594727 L 8.216814041137695 15.39354228973389 L 6.403336524963379 16.43941688537598 L 4.160664081573486 15.34081649780273 C 4.104393482208252 15.31260681152344 4.041926860809326 15.2990140914917 3.979021549224854 15.30129051208496 L 3.979021549224854 15.30271625518799 C 3.806337833404541 15.30884456634521 3.660192012786865 15.43216514587402 3.62510347366333 15.60135650634766 C 3.590014457702637 15.77054977416992 3.675065517425537 15.94181823730469 3.831069946289062 16.01611518859863 L 5.619646549224854 16.89204216003418 L 4.273456573486328 17.66994285583496 C 4.093842029571533 17.77347564697266 4.03220272064209 18.00302314758301 4.135765075683594 18.18262100219727 C 4.239327907562256 18.36221885681152 4.468874454498291 18.42385864257812 4.648472785949707 18.3202953338623 L 5.991714000701904 17.54536628723145 L 5.856954097747803 19.52439117431641 C 5.839363574981689 19.66263771057129 5.899881362915039 19.79923820495605 6.014096260070801 19.87909317016602 C 6.128310680389404 19.95894622802734 6.277385711669922 19.9688835144043 6.401188850402832 19.90489768981934 C 6.5249924659729 19.84090995788574 6.603106021881104 19.71355056762695 6.604021549224854 19.57419204711914 L 6.773941516876221 17.09274291992188 L 8.58738899230957 16.04686737060547 L 8.451189041137695 18.02439117431641 C 8.43736743927002 18.23111915588379 8.593805313110352 18.40985488891602 8.800535202026367 18.42361068725586 C 9.007265090942383 18.43736457824707 9.186002731323242 18.28092765808105 9.199756622314453 18.07419776916504 L 9.368213653564453 15.59424209594727 L 12.5293140411377 13.77046680450439 L 12.5293140411377 17.4135913848877 L 10.45946407318115 18.8037166595459 C 10.28754425048828 18.91940689086914 10.24196243286133 19.15256118774414 10.35765171051025 19.3244800567627 C 10.47334098815918 19.49639892578125 10.70649528503418 19.54198265075684 10.87841415405273 19.42629241943359 L 12.5293140411377 18.31734085083008 L 12.5293140411377 20.4091682434082 L 10.45946407318115 21.79929161071777 C 10.28754425048828 21.91497993469238 10.24196147918701 22.14813232421875 10.35765075683594 22.32005310058594 C 10.47334098815918 22.49197196960449 10.70649337768555 22.53755569458008 10.87841415405273 22.42186546325684 L 12.5293140411377 21.31299209594727 L 12.5293140411377 22.86714172363281 C 12.52927684783936 23.07426834106445 12.69718647003174 23.24217796325684 12.9043140411377 23.24217796325684 C 13.11144256591797 23.24217796325684 13.27935123443604 23.07426834106445 13.27935123443604 22.86714172363281 L 13.2793140411377 21.31299209594727 L 14.93021392822266 22.42186737060547 C 15.04134654998779 22.50240707397461 15.18759918212891 22.51580810546875 15.3115177154541 22.45680236816406 C 15.4354362487793 22.39780044555664 15.51722717285156 22.27581787109375 15.52476119995117 22.13877487182617 C 15.53229331970215 22.00173377990723 15.4643669128418 21.87152290344238 15.3476619720459 21.79929161071777 L 13.2793140411377 20.4091682434082 L 13.2793140411377 18.31734085083008 L 14.93021392822266 19.42629241943359 C 15.04134654998779 19.50684547424316 15.18760681152344 19.52025413513184 15.3115348815918 19.46125221252441 C 15.43546295166016 19.40224838256836 15.51725769042969 19.28025817871094 15.52478790283203 19.14320945739746 C 15.53231811523438 19.00615882873535 15.46438026428223 18.87594413757324 15.34766387939453 18.80371856689453 L 13.2793140411377 17.4135913848877 L 13.2793140411377 13.76169204711914 L 16.43898963928223 15.5854663848877 L 16.60894012451172 18.07569122314453 C 16.62309074401855 18.28239631652832 16.80213928222656 18.4384765625 17.00884056091309 18.42430877685547 C 17.21554374694824 18.41014289855957 17.37162399291992 18.23109436035156 17.35745811462402 18.02439117431641 L 17.22123908996582 16.03659248352051 L 19.03323936462402 17.08396530151367 L 19.20461463928223 19.57569122314453 C 19.2055492401123 19.71503829956055 19.28366661071777 19.84237861633301 19.40746116638184 19.9063549041748 C 19.53125762939453 19.97033309936523 19.68031883239746 19.96039581298828 19.79452514648438 19.88055419921875 C 19.90873527526855 19.80071258544922 19.96925926208496 19.66412925720215 19.95168876647949 19.52589225769043 L 19.81691551208496 17.5351676940918 L 21.16016387939453 18.31149291992188 C 21.27642631530762 18.38508987426758 21.42365455627441 18.38911247253418 21.54376029968262 18.32197189331055 C 21.66386604309082 18.25482940673828 21.7375602722168 18.12730979919434 21.73576736450195 17.98972320556641 C 21.73397254943848 17.85213470458984 21.65697860717773 17.7265796661377 21.53516387939453 17.6625919342041 L 20.19633865356445 16.88911628723145 L 21.97758865356445 16.01611709594727 C 22.13529205322266 15.94073486328125 22.22000694274902 15.76640510559082 22.18182945251465 15.59583282470703 C 22.14365196228027 15.42526054382324 21.99270439147949 15.30367851257324 21.81791496276855 15.30271625518799 C 21.75894355773926 15.30234718322754 21.70071983337402 15.31588840484619 21.64796257019043 15.34224319458008 L 19.41258811950684 16.43799209594727 L 17.59916496276855 15.38911628723145 L 19.38333892822266 14.51611709594727 C 19.54128837585449 14.4406099319458 19.62598609924316 14.26587009429932 19.58740615844727 14.09510612487793 C 19.54882621765137 13.92433929443359 19.39723205566406 13.80298519134521 19.22216415405273 13.80271625518799 C 19.16321754455566 13.8023567199707 19.10502052307129 13.81589889526367 19.05228805541992 13.84223937988281 L 16.81691551208496 14.93799209594727 L 13.66166400909424 13.1157169342041 L 16.81983947753906 11.29344177246094 L 19.05228996276855 12.38769149780273 C 19.23837471008301 12.4791088104248 19.46333503723145 12.40236568450928 19.55475234985352 12.21627998352051 C 19.64616966247559 12.03019428253174 19.56942558288574 11.8052339553833 19.38333892822266 11.71381664276123 L 17.60208892822266 10.84081649780273 L 19.41116523742676 9.796366691589355 L 21.64796257019043 10.89061737060547 C 21.83402824401855 10.98163986206055 22.05865287780762 10.90459251403809 22.1496753692627 10.71852874755859 C 22.24069786071777 10.53246307373047 22.16365242004395 10.30783939361572 21.97758674621582 10.21681594848633 L 20.19633865356445 9.343742370605469 L 21.53516387939453 8.570266723632812 C 21.68318557739258 8.488408088684082 21.75809288024902 8.317596435546875 21.71803665161133 8.15325927734375 C 21.67798042297363 7.9889235496521 21.53287696838379 7.871737480163574 21.36379051208496 7.867171764373779 L 21.36379051208496 7.868634700775146 C 21.29241752624512 7.865986824035645 21.22177124023438 7.883773803710938 21.16016387939453 7.919904232025146 L 19.81691551208496 8.696267127990723 L 19.95168876647949 6.708482265472412 C 19.96064567565918 6.600948333740234 19.92284965515137 6.494766712188721 19.84796333312988 6.417076110839844 C 19.7730770111084 6.339385986328125 19.66835403442383 6.29771614074707 19.5605640411377 6.302717208862305 C 19.36861038208008 6.312222957611084 19.21490859985352 6.465298175811768 19.20461463928223 6.657211780548096 L 19.03323936462402 9.147466659545898 L 17.22123908996582 10.1948413848877 L 17.3574390411377 8.205549240112305 C 17.36639595031738 8.098015785217285 17.32859802246094 7.991837024688721 17.25371170043945 7.914148807525635 C 17.17882347106934 7.836460590362549 17.0741024017334 7.794791698455811 16.9663143157959 7.799792766571045 C 16.77380752563477 7.808591365814209 16.61929893493652 7.961851119995117 16.60894012451172 8.154279708862305 L 16.43898963928223 10.64596652984619 L 13.2793140411377 12.46974182128906 L 13.2793140411377 8.81641674041748 L 15.34766387939453 7.426254749298096 C 15.46444034576416 7.354055881500244 15.53243446350098 7.223818778991699 15.52491760253906 7.086730480194092 C 15.5174036026001 6.949643611907959 15.43558120727539 6.827619075775146 15.31161117553711 6.768618583679199 C 15.18764209747314 6.709618091583252 15.04134178161621 6.723072052001953 14.93021297454834 6.803694248199463 L 13.2793140411377 7.912584781646729 L 13.2793140411377 5.819319725036621 L 15.34766387939453 4.429187297821045 C 15.46444034576416 4.356988906860352 15.53243446350098 4.226751804351807 15.52491760253906 4.089664459228516 C 15.5174036026001 3.952576637268066 15.43558120727539 3.830552101135254 15.31161117553711 3.771551609039307 C 15.18764209747314 3.71255087852478 15.04134178161621 3.726005554199219 14.93021297454834 3.806626796722412 L 13.2793140411377 4.915509700775146 L 13.2793140411377 3.367172241210938 C 13.28090190887451 3.265685319900513 13.24128723144531 3.167888641357422 13.16951656341553 3.09611701965332 C 13.09774589538574 3.024345636367798 12.99995040893555 2.984729051589966 12.89846324920654 2.986314535140991 Z" fill="#0a374d" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_yc5sih =
     '<svg viewBox="4.1 0.0 19.8 21.2" ><path transform="translate(2.6, -0.5)" d="M 20.98081016540527 16.22749137878418 C 20.16339874267578 17.17708015441895 19.21746063232422 18.00794219970703 18.17036819458008 18.6960334777832 C 16.35061454772949 19.97001838684082 14.29219245910645 20.86316680908203 12.11867713928223 21.32185173034668 C 11.20821857452393 21.47603607177734 10.27622318267822 21.44814682006836 9.376613616943359 21.23979377746582 C 8.54236888885498 21.04148864746094 7.557686328887939 21.56118392944336 6.696089744567871 21.64323997497559 C 5.764482975006104 21.79889869689941 4.808183193206787 21.70208930969238 3.92667293548584 21.36288070678711 C 3.213466167449951 20.94502830505371 2.623634338378906 20.34576034545898 2.217156171798706 19.62600898742676 C 1.36821174621582 18.21305274963379 1.288513898849487 16.46740341186523 2.005176544189453 14.9829626083374 C 3.241596221923828 12.69880771636963 6.036364555358887 11.76323318481445 8.398769378662109 12.8426513671875 C 8.599931716918945 12.9279146194458 8.794247627258301 13.0285005569458 9.041547775268555 13.08198070526123 C 9.656205177307129 12.47907066345215 10.44178676605225 12.08030891418457 11.29127311706543 11.94002437591553 C 12.11042785644531 11.81277465820312 12.94891929626465 11.93426036834717 13.69827461242676 12.28876399993896 L 13.69827079772949 8.110705375671387 C 13.85140419006348 7.531201362609863 13.7359094619751 6.913556098937988 13.38372230529785 6.42854118347168 C 13.09121608734131 6.045315265655518 12.65815162658691 5.79433536529541 12.18021774291992 5.731057643890381 C 11.81780338287354 5.710544586181641 11.79728889465332 5.888333320617676 11.32546234130859 5.888333320617676 C 10.73055076599121 5.888333320617676 10.53224563598633 5.655839443206787 10.05358123779297 5.6968674659729 C 9.499698638916016 5.744734287261963 9.424479484558105 6.079800128936768 9.007357597351074 6.141342639923096 C 8.275684356689453 6.25075101852417 7.379897117614746 5.348125457763672 7.106374740600586 4.58910083770752 C 6.634548664093018 3.269353866577148 7.619229793548584 1.860712647438049 8.556045532226562 1.026468276977539 C 9.431318283081055 0.2469286769628525 9.862115859985352 0.4589087665081024 10.92201519012451 0.8555165529251099 C 11.80491161346436 1.185878276824951 12.66009330749512 1.586031079292297 13.47945690155029 2.052177906036377 C 14.18814754486084 2.459077596664429 14.86684417724609 2.916114330291748 15.51035976409912 3.419793605804443 C 16.89723968505859 4.913671970367432 18.07919692993164 6.585431098937988 19.02511978149414 8.391068458557129 C 20.00334739685059 10.25762748718262 20.71899223327637 12.25038909912109 21.15176773071289 14.31283283233643 C 21.31587600708008 15.06502056121826 21.5073413848877 15.5436840057373 20.98081016540527 16.22749137878418 Z" fill="none" stroke="#0a374d" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_gseja9 =
